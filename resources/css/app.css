@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --bg-sidebar: #1a202c;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+@layer components {
+    .side-bar {
+        background: var(--bg-sidebar);
+        color: var(--white);
+    }
+
+    .sidebar-link {
+        @apply text-gray-400 flex items-center gap-2 px-3 py-2 hover:bg-gray-800 hover:text-white;
+    }
+
+    .sidebar-link.active {
+        @apply bg-gray-700 text-white;
+    }
+}
